@@ -1,0 +1,369 @@
+/* Reset default */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:visited {
+  color: inherit;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+html,
+body {
+  height: 100%;
+  font-size: 16px;
+  color: #333;
+
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+button:hover {
+  cursor: pointer;
+  background: rgba(17, 17, 17, 0.75);
+  transition: 500ms;
+}
+
+/*Main-block*/
+
+.main-block {
+  position: relative;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+.main-block__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+.main-block__bg img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.main-block__bg::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.main-block__container {
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+  max-width: 1440px;
+  height: 100%;
+  padding: 0 20px;
+}
+
+.main-block__logo {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  height: 64px;
+  width: 64px;
+  border-radius: 50%;
+  z-index: 2;
+
+  background-color: #c4c4c4;
+}
+
+.form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  max-width: 540px;
+  background-color: #fff;
+}
+
+.form__wrapper {
+  margin: 0 auto;
+  padding: 80px 40px;
+}
+._input {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.form__close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+}
+
+.form__close:hover {
+  cursor: pointer;
+}
+
+.form__title {
+  font-size: 2rem;
+  font-size: 500;
+}
+
+.form__email {
+  margin: 32px 0;
+  color: #666;
+}
+.form__email label {
+  margin-bottom: 4px;
+}
+
+.password__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+  color: #666;
+}
+.password__title span {
+  padding-right: 15px;
+}
+
+.password__title span img {
+  width: 20px;
+  height: 20px;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.password__title span:hover {
+  cursor: pointer;
+}
+
+.form__button {
+  display: block;
+  font-size: 18px;
+  color: #fff;
+  background: rgba(17, 17, 17, 0.45);
+  border-radius: 32px;
+  width: 100%;
+  padding: 15px 0;
+  margin: 32px 0 8px 0;
+}
+
+.form__remember {
+  display: flex;
+  justify-content: space-between;
+  line-height: 24px;
+  margin: 8px 0 30px 0;
+}
+
+.google__auth {
+  position: relative;
+  display: block;
+  font-size: 18px;
+  color: #fff;
+  border-radius: 32px;
+  width: 100%;
+  padding: 15px 0;
+  background: rgba(17, 17, 17, 0.45);
+  margin: 0 0 50px 0;
+}
+
+.google__auth img {
+  display: inline-block;
+  padding-right: 10px;
+}
+
+.form__signup {
+  color: #666;
+}
+._link a {
+  color: #111111;
+  transition: 1000ms;
+}
+
+._link a:hover {
+  text-decoration: underline;
+}
+.form__recaptcha {
+  display: block;
+  margin-top: 10px;
+  color: #666;
+}
+
+._input input {
+  border: 1px solid black;
+  border-radius: 12px;
+  height: 56px;
+  color: #111;
+  font-size: 18px;
+  padding: 0 7px;
+}
+
+@media (max-width: 1023px) {
+  .form__wrapper {
+    padding: 45px 40px;
+  }
+
+  .form__wrapper label {
+    font-size: 14px;
+  }
+
+  .form__wrapper button {
+    font-size: 16px;
+  }
+
+  .form__email {
+    margin: 20px 0;
+  }
+
+  .form__password span {
+    font-size: 14px;
+  }
+
+  .form__remember {
+    font-size: 14px;
+  }
+
+  .main-block__logo {
+    height: 50px;
+    width: 50px;
+  }
+
+  ._input input {
+    height: 45px;
+    font-size: 16px;
+  }
+
+  .google__auth {
+    margin-bottom: 30px;
+  }
+
+  ._link {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 767px) {
+  .form {
+    min-width: 340px;
+  }
+  .main-block__logo {
+    top: 20px;
+    left: 20px;
+  }
+  .form__wrapper {
+    padding: 30px 30px;
+  }
+  .form__title {
+    font-size: 20px;
+  }
+  .form__close {
+    right: 15px;
+    top: 15px;
+  }
+  ._input input {
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .password__title span img {
+    width: 15px;
+    height: 15px;
+  }
+  .form__button {
+    margin: 20px 0 8px 0;
+  }
+
+  .form__remember {
+    margin: 8px 0 20px 0;
+  }
+
+  .form__wrapper button {
+    font-size: 13px;
+    padding: 12px;
+  }
+
+  .google__auth {
+    margin-bottom: 20px;
+  }
+  .google__auth img {
+    height: 15px;
+  }
+
+  ._link {
+    font-size: 12px;
+  }
+
+  .form__wrapper label {
+    font-size: 12px;
+  }
+
+  .form__password span {
+    font-size: 12px;
+  }
+
+  .form__remember {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 479px) {
+  .form {
+    min-width: 280px;
+  }
+  .form__wrapper {
+    padding: 20px 15px;
+  }
+
+  .password__title span img {
+    margin: 0;
+  }
+
+  .main-block__logo {
+    height: 35px;
+    width: 35px;
+  }
+
+  .form__wrapper button {
+    font-size: 10px;
+    padding: 12px;
+  }
+}
