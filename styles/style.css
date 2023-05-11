@@ -83,6 +83,7 @@ button:hover {
 }
 
 .main-block__container {
+  overflow: scroll;
   margin: 0 auto;
   position: relative;
   z-index: 2;
@@ -117,6 +118,7 @@ button:hover {
   flex-direction: column;
   max-width: 540px;
   background-color: #fff;
+  overflow: scroll;
 }
 
 .form__wrapper {
@@ -365,5 +367,72 @@ button:hover {
   .form__wrapper button {
     font-size: 10px;
     padding: 12px;
+  }
+}
+
+@media (max-height: 468px) {
+  .form {
+    max-height: 350px;
+  }
+  .form {
+    min-width: 340px;
+  }
+  .main-block__logo {
+    top: 20px;
+    left: 20px;
+  }
+  .form__wrapper {
+    padding: 30px 30px;
+  }
+  .form__title {
+    font-size: 20px;
+  }
+  .form__close {
+    right: 15px;
+    top: 15px;
+  }
+  ._input input {
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .password__title span img {
+    width: 15px;
+    height: 15px;
+  }
+  .form__button {
+    margin: 20px 0 8px 0;
+  }
+
+  .form__remember {
+    margin: 8px 0 20px 0;
+  }
+
+  .form__wrapper button {
+    font-size: 13px;
+    padding: 12px;
+  }
+
+  .google__auth {
+    margin-bottom: 20px;
+  }
+  .google__auth img {
+    height: 15px;
+  }
+
+  ._link {
+    font-size: 12px;
+  }
+
+  .form__wrapper label {
+    font-size: 12px;
+  }
+
+  .form__password span {
+    font-size: 12px;
+  }
+
+  .form__remember {
+    font-size: 12px;
   }
 }
