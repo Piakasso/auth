@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/style.css">
+    <script src="./scripts/script.js" defer type="module"></script>
     <title>Auth</title>
 </head>
 
@@ -18,9 +19,9 @@
             <div class="main-block__form form">
                 <span class="form__close"><img src="./img/close.svg" alt="">
                 </span>
-                <div class="form__wrapper">
+                <div class="form__wrapper _signin">
                     <h1 class="form__title">Sign in</h1>
-                    <form action="" method="post">
+                    <form class='field' action="" method="get">
                         <div class="form__email _input">
                             <label for="email">Email or phone number</label>
                             <input id="email" type="text" name="email" required>
@@ -29,11 +30,12 @@
                         <div class="form__password _input">
                             <div class="password__title">
                                 <label for="password">Password</label>
-                                <span><img src="./img/hide.png" alt="hide"> Hide</span>
+                                <span class="eye__hide "><img src="./img/hide.png" alt="hide"> Hide</span>
+                                <span class="eye__show  _active"><img src="./img/show.png" alt="show"> Show</span>
                             </div>
-                            <input type="text" id="password" name="password" required>
+                            <input type="password" id="password" name="password" required>
                         </div>
-                        <button class='form__button' type="submit">Sign in</button>
+                        <button class='form__button button_signin' type="submit">Sign in</button>
 
                         <div class="form__remember">
                             <div remember__title>
@@ -42,6 +44,8 @@
                             </div>
                             <span><a href="">Need help?</a></span>
                         </div>
+
+                        <span class="form__notice">Wrong login or password</span>
                     </form>
 
                     <button class="google__auth" type=""><img src="./img/google.png" alt="google">Continue with
@@ -55,10 +59,56 @@
                         bot.<a href="">Learn more.</a>
                     </span>
                 </div>
+
+                <div class="form__wrapper _signup">
+                    <h1 class="form__title">Sign up</h1>
+                    <form class='field' action="" method="post">
+                        <div class="form__email _input">
+                            <label for="email__signup">Email or phone number</label>
+                            <input id="email__signup" type="text" name="email" required>
+                        </div>
+
+                        <div class="form__password _input">
+                            <div class="password__title">
+                                <label for="password__signup">Password</label>
+                                <span class="eye__hide _active"><img src="./img/hide.png" alt="hide"> Hide</span>
+                                <span class="eye__show "><img src="./img/show.png" alt="show"> Show</span>
+                            </div>
+                            <input type="text" id="password__signup" name="password" required>
+                        </div>
+                        <button class='form__button button_signup' type="submit">Sign up</button>
+
+                        <div class="form__remember remember_signup">
+                            <div remember__title>
+                                <input name='checkbox' id="checkbox__signup" type="checkbox" checked>
+                                <label for="checkbox__signup">Remember me</label>
+                            </div>
+                            <span><a href="">Need help?</a></span>
+                        </div>
+
+                        <span class="form__notice form__notice-signup">Wrong login or password</span>
+                    </form>
+
+                    <button class="google__auth" type=""><img src="./img/google.png" alt="google">Continue with
+                        Google</button>
+
+                    <span class="form__signup _link">Have an acount?
+                        <a href="">Sign in</a> </span>
+
+                    <span class="form__recaptcha _link">This page is protected by Google reCAPTCHA to ensure you're not
+                        a
+                        bot.<a href="">Learn more.</a>
+                    </span>
+                </div>
             </div>
         </div>
         <div class="main-block__bg"><img src="./img/bg.jpg" alt=""></div>
     </div>
+
 </body>
+
+
+</script>
+
 
 </html>
