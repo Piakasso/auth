@@ -281,6 +281,14 @@ button:hover {
   display: block;
 }
 
+.newpage__container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+}
+
 @media (max-width: 1023px) {
   .form__wrapper {
     padding: 45px 40px;
@@ -399,6 +407,10 @@ button:hover {
   .form__remember {
     font-size: 12px;
   }
+
+  .newpage__container {
+    font-size: 18px;
+  }
 }
 
 @media (max-width: 479px) {
@@ -504,14 +516,6 @@ button:hover {
 
 ._signup {
   display: none;
-}
-
-.newpage__container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 30px;
 }
 
 .button__logout {

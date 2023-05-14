@@ -1,13 +1,12 @@
 "use strict";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js";
+import { getDatabase } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-database.js";
 import {
   getAuth,
   onAuthStateChanged,
-} from "https://www.gstatic.com/firebasejs/9.21.0/firebase-auth.js";
-import {
-  signInWithEmailAndPassword,
-  createUserWithEmailAndPassword,
   signOut,
 } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-auth.js";
+
 const firebaseConfig = {
   apiKey: "AIzaSyCxY-dDZTJDWqfTdALUKbbhCrWCD4Mh_-8",
   authDomain: "auth-app-e88b8.firebaseapp.com",
@@ -18,6 +17,9 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
+
+const app = initializeApp(firebaseConfig);
+const database = getDatabase(app);
 
 const auth = getAuth();
 const exit = document.querySelector(".button__logout");
